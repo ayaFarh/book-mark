@@ -1,0 +1,153 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: rgb(247, 236, 222);
+  --orange-color: rgb(187, 65, 32);
+  --grren-color: rgb(187, 65, 32);
+  --brown-color: rgb(53, 46, 40);
+  --yewllo-color: #fec260;
+}
+body {
+  background-color: rgb(247, 236, 222);
+}
+/* spacial classes */
+.cursor {
+  cursor: pointer;
+}
+.border-block {
+  border-top: 2px dotted darkgray;
+  border-bottom: 2px dotted darkgray;
+}
+.alert-a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.fa-xmark {
+  left: 90%;
+  top: 10%;
+}
+.yello {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0%;
+  background-color: #d99c39;
+}
+.yello::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #279348;
+  position: absolute;
+  left: 100%;
+  margin-inline: 10px;
+}
+.yello::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #cf2135;
+
+  position: absolute;
+  left: 270%;
+}
+.overlay {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  width: fit-content;
+  font-size: 50px;
+}
+h2 {
+  font-family: "Righteous", sans-serif;
+  width: fit-content;
+  
+  
+}
+
+.h::before {
+  content: "";
+  width: 100%;
+  height: 20%;
+  background-color: var(--yewllo-color);
+  position: absolute;
+  bottom: 0%;
+  left: 0px;
+  z-index: -1;
+  transition: all 0.5s;
+}
+.h:hover::before {
+  height: 40%;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem #fec26055;
+  border-color: #d99c39;
+}
+.btn-form {
+  background-color: #d1512d;
+  color: white !important;
+  padding-inline: 30px !important;
+}
+form i {
+  margin-right: 10px;
+}
+table {
+  text-align: center;
+
+  tr {
+    border-bottom: 1px solid darkgray;
+
+    td {
+      padding-block: 15px;
+      margin-bottom: 5px;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      padding: 10px 25px;
+      border-radius: 7px;
+      i {
+        margin-right: 5px;
+      }
+    }
+    .visite {
+      background-color: #3ca55c;
+      transition: all 0.5s;
+      &:hover {
+        color: white;
+        background-color: #279348;
+      }
+    }
+    .delete {
+      background-color: #eb1d36;
+      transition: all 0.5s;
+      &:hover {
+        color: white;
+        background-color: #cf2135;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px), (min-width: 500) {
+  .alert-a {
+    width: 70% !important;
+  }
+}
